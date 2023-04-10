@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:ital@1&display=swap');
+
+*{
+    font-family: 'Genos', sans-serif;
+    margin:0;
+}
+:root{
+    --mindaro: #BCE784;
+    --emerald: #5DD39E;
+    --blue: #348AA7;
+    --ultra-violet: #525174;
+    --english-violet: #513B56;
+}
+
+
+/* head */
+h1{
+    text-align: center;
+    font-size: 5rem;
+}
+.welcome-grid-container{
+    /* margin-top:1rem; */
+    display:grid;
+    place-items: center;
+    grid-template-columns: repeat(1 , 1fr);
+    grid-gap:1rem;
+    
+}
+.world{
+    text-align: center;
+    font-size: 15rem;
+    width: 100%;
+    background-color: var(--mindaro);
+    position:relative;
+    height:22rem;
+}
+.welcome{
+    height:7rem;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: var(--emerald);
+}
+
+
+/* form */
+form{
+    background-color: var(--blue);
+}
+fieldset{
+    border:0; 
+    font-size: 2rem;
+}
+
+/* landen */
+
+h3{
+    font-size: 2rem;
+    padding:1rem;
+    background-color: var(--blue);
+}
+.country-flag{
+    width: 22rem;
+}
+.countries-grid{
+    display:grid;
+    justify-items: center;
+    width:100%;
+    background-color: var(--mindaro);
+}
+.country{
+    margin-top:2rem;
+}

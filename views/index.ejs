@@ -1,0 +1,26 @@
+<%- include('./partials/head.ejs') %>
+
+<article>
+    <p class="welcome">
+        Welcome to my countries project website that I made to practice with API.
+    </p>
+</article>
+
+<form action="/search" method="get">
+    <fieldset>
+        <legend>Search for a country:</legend>
+        <label for="name">Country</label>
+        <input id="name" name="name" type="text" required>
+        <button type="submit">Search</button>
+    </fieldset>
+</form>
+
+<div class="countries-grid">
+    <% countries.forEach(country => { %>
+        <article class="country">
+            <h2><%= country.name.common %></h2>
+            <img class="country-flag" src="<%= country.flags.svg %>" alt="<% country.flags.alt %>">
+        </article>
+    <% }); %>
+</div>
+<%- include('./partials/foot.ejs') %>

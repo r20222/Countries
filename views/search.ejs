@@ -1,0 +1,16 @@
+<%- include('./partials/head.ejs') %>
+
+<h3>You searched for <%= query %></h3>
+
+<div class="countries-grid">
+    <% country.forEach(country => { %>
+        <article class="country">
+            <h2><%= country.name.common %></h2>
+            <img class="country-flag" src="<%= country.flags.svg %>" alt="<% country.flags.alt %>">
+        </article>
+    <% }); %>
+</div>
+      
+
+
+<%- include('./partials/foot.ejs') %>
