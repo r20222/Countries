@@ -66,6 +66,10 @@ h3{
 .country-flag{
     width: 18rem;
 }
+.country-coat{
+    width: 18rem;
+    margin-top: 1rem;
+}
 .countries-grid{
     display:grid;
     justify-items: center;

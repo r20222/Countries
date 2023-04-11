@@ -10,7 +10,8 @@
             <p>Continent(s): <%= country.continents %></p>
             <p>Subregion: <%= country.subregion %></p>
             <p>Capital: <%= country.capital %></p>
-            <p>Language(s): <%= Object.values(country.languages).join(", ") %></p></p>
+            <p>Language(s): <%= Object.values(country.languages).join(", ") %></p>
+            <img class="country-coat" src="<%= country.coatOfArms.svg %>" alt="coat of arms">
         </article>
     <% }); %>
 </div>
