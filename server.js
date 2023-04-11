@@ -25,13 +25,22 @@ server.get('/', (request, response) => {
   })
 
 //   route voor als je zoekt op een land
-
   server.get('/search', (request, response) => {
     const query = request.query.name;
     const url = `https://restcountries.com/v3.1/name/${query}`;
 
     fetchJson(url).then((data) => {
       response.render('search', {country: data, query: query})
+    })
+  })
+
+  // route voor als je een land in de index aanklikt
+  server.get('/country', (request, response) => {
+    const query = request.query.name;
+    const url = `https://restcountries.com/v3.1/name/${query}`;
+
+    fetchJson(url).then((data) => {
+      response.render('country', {country: data, query: query})
     })
   })
 

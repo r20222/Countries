@@ -1,6 +1,6 @@
 <%- include('./partials/head.ejs') %>
 
-<h3>You searched for <%= query %></h3>
+<h3>You clicked on <%= query %></h3>
 
 <div class="countries-grid">
     <% country.forEach(country => { %>
@@ -14,7 +14,7 @@
         </article>
     <% }); %>
 </div>
-      
+    
 <form action="/search" method="get">
     <fieldset>
         <legend class="another">Search for another country:</legend>

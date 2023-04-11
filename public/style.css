@@ -18,13 +18,18 @@ h1{
     text-align: center;
     font-size: 5rem;
 }
+.index{
+    text-decoration: none;
+    color: black;
+}
 .welcome-grid-container{
     /* margin-top:1rem; */
-    display:grid;
+    /* display:grid;
     place-items: center;
-    grid-template-columns: repeat(1 , 1fr);
-    grid-gap:1rem;
-    
+    grid-template-columns: repeat(1 , 1fr); */
+    /* grid-gap:1rem; */
+    display: flex;
+    flex-direction: column;
 }
 .world{
     text-align: center;
@@ -35,7 +40,7 @@ h1{
     height:22rem;
 }
 .welcome{
-    height:7rem;
+    height:14rem;
     padding: 1rem;
     font-size: 2rem;
     background-color: var(--emerald);
@@ -59,7 +64,7 @@ h3{
     background-color: var(--blue);
 }
 .country-flag{
-    width: 22rem;
+    width: 18rem;
 }
 .countries-grid{
     display:grid;
@@ -67,6 +72,53 @@ h3{
     width:100%;
     background-color: var(--mindaro);
 }
+.another{
+    font-size: 1.5rem;;
+}
 .country{
     margin-top:2rem;
+    margin-bottom:2rem;
+    padding:1rem;
+    border:1px solid var(--english-violet);
+    background-color: var(--emerald);
+}
+
+footer{
+    height:5rem;
+    background-color: var(--mindaro);
+}
+
+
+/* mediaqueries */
+
+@media screen and (min-width: 50em){
+    .welcome-grid-container{
+        /* margin-top:1rem; */
+        /* display:grid;
+        place-items: center;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-gap:1rem; */
+        display:flex;
+        flex-direction: row;
+    }
+    .countries-grid{
+        display:grid;
+        justify-items: center;
+        width:100%;
+        background-color: var(--mindaro);
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .world{
+        width: 50%;
+    }
+    .welcome{
+        height: 20rem;
+    }
+
+}
+
+@media screen and (min-width: 75em){
+    .countries-grid{
+        grid-template-columns: repeat(3 , 1fr);
+    }
 }

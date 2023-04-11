@@ -1,10 +1,11 @@
 <%- include('./partials/head.ejs') %>
 
-<article>
-    <p class="welcome">
-        Welcome to my countries project website that I made to practice with API.
-    </p>
-</article>
+
+
+
+
+
+
 
 <form action="/search" method="get">
     <fieldset>
@@ -17,10 +18,10 @@
 
 <div class="countries-grid">
     <% countries.forEach(country => { %>
-        <article class="country">
+        <a href="/country?name=<%= country.name.common %>" class="country">
             <h2><%= country.name.common %></h2>
             <img class="country-flag" src="<%= country.flags.svg %>" alt="<% country.flags.alt %>">
-        </article>
+        </a>
     <% }); %>
 </div>
 <%- include('./partials/foot.ejs') %>
