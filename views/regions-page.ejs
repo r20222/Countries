@@ -1,0 +1,8 @@
+<%- include('./partials/head.ejs') %>
+
+<% regions.forEach(region =>{ %>
+    <p class="region"><a href="/region?region=<%= region %>"><%= region %></a></p>
+<% }) %>
+
+
+<%- include('./partials/foot.ejs') %>

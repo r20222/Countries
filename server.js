@@ -34,6 +34,38 @@ server.get('/', (request, response) => {
     })
   })
 
+  // route voor als je zoekt op continent
+  
+  // array waar elke region max 1x in komt
+  const regions = [];
+
+  server.get('/regions-page', (request, response) => {
+    const url = `https://restcountries.com/v3.1/all?fields=region`
+
+    fetchJson(url).then(data => {
+      data.forEach(country => {
+        const region = country.region;
+
+        // voeg de regio toe aan de array als deze nog niet is weergegeven
+        if (!regions.includes(region)) {
+          regions.push(region);
+        }
+      });
+      
+      response.render('regions-page', {regions: regions})
+    })
+  })
+
+  // route voor als je een region in de regions-page aanklikt
+  server.get('/region', (request, response) => {
+    const query = request.query.region;
+    const url = `https://restcountries.com/v3.1/region/${query}`;
+
+    fetchJson(url).then((data) => {
+      response.render('region', {country: data, query: query})
+    })
+  })
+
   // route voor als je een land in de index aanklikt
   server.get('/country', (request, response) => {
     const query = request.query.name;

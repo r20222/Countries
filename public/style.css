@@ -40,7 +40,8 @@ h1{
     height:15rem;
 }
 .welcome{
-    height:16rem;
+    /* height:16rem; */
+    /* -bottom:1rem; */
     padding: 1rem;
     font-size: 2rem;
     background-color: var(--emerald);
@@ -55,6 +56,35 @@ fieldset{
     border:0; 
     font-size: 2rem;
 }
+
+/* search by continent */
+a{
+    text-decoration: none;
+}
+.continents{
+    background-color: var(--ultra-violet);
+    /* height:6rem; */
+    font-size: 2rem;
+    padding:1rem;
+    color:black;
+}
+
+
+.region{
+    background-color: var(--ultra-violet);
+    color: var(--emerald);
+    font-size: 2rem;
+    padding:1rem;
+}
+.region a{
+    color: black;
+    display: block;
+    width:100%;
+}
+.region:nth-of-type(2n){
+    background-color: var(--emerald);
+}
+
 
 /* landen */
 
@@ -85,6 +115,7 @@ h3{
     padding:1rem;
     border:1px solid var(--english-violet);
     background-color: var(--emerald);
+    border-radius: 1rem;
 }
 .country p{
     max-width: 18rem;
