@@ -37,7 +37,7 @@ h1{
     width: 100%;
     background-color: var(--mindaro);
     position:relative;
-    height:15rem;
+    /* height:15rem; */
 }
 .welcome{
     /* height:16rem; */
@@ -80,7 +80,6 @@ a{
     display: block;
     width:100%;
 }
-
 .region:nth-of-type(2n){
     background-color: var(--emerald);
 }
