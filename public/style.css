@@ -66,23 +66,26 @@ a{
     /* height:6rem; */
     font-size: 2rem;
     padding:1rem;
-    color:black;
+    color:var(--mindaro);
 }
 
 
 .region{
     background-color: var(--ultra-violet);
-    color: var(--emerald);
     font-size: 2rem;
     padding:1rem;
 }
 .region a{
-    color: black;
+    color: var(--mindaro);
     display: block;
     width:100%;
 }
+
 .region:nth-of-type(2n){
     background-color: var(--emerald);
+}
+.region:nth-of-type(2n) a{
+    color: black;
 }
 
 
